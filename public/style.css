@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 :root {
     --color-green: #50fa7b;
     --color-rocket: #7159c1;
@@ -28,7 +28,36 @@ header .links {
     line-height: 32px;
 }
 
+header .links a + a {
+    margin-left: 20px;
+}
+
 header .links a {
     text-decoration: none;
-    margin-left: 10px;
+    color: #777;
+    position: relative;
+}
+
+header .links a.active {
+    font-weight: bold;
+    color: var(--color-rocket);
+}
+
+header .links a:hover {
+    color: var(--color-rocket);
+}
+
+
+header .links a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--color-rocket);
+}
+header .links a:hover::after {
+    width: 100%;
+    transition: width 300ms ease-in-out;
 }
