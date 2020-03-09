@@ -1,3 +1,6 @@
+const fs = require('fs')
+const data = require("./data.json") // importando json data 
+
 exports.post = function(req, res){
     //req.body
     // retorna = { "avatar_url": "http://www.test.com.br", "name": "Gabriel", "birth": "2019-12-01", "gender": "M", "services": "rqr" }
@@ -11,5 +14,16 @@ exports.post = function(req, res){
             return res.send("Please, fill all fields")
         }
     }
-    return res.send(req.body)
+
+    data.instructors.push(req.body) // utilizando o arquivo json data - adicionando o req.body no array
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
+        if(err) {
+            return res.send('Write file error')
+        }
+        return res.redirect('/instructors')
+    })
+
+    // return res.send(req.body)
 }
+
