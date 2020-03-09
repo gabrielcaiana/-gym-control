@@ -140,3 +140,35 @@ header .links a:hover::after {
     font-size: 12px;
     line-height: 22px;
 }
+
+/* Form */
+
+input {
+    width: 100%;
+    outline: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+input[type="radio"] {
+    width: initial;
+    margin-right: 4px;
+}
+
+input::placeholder {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: normal;
+}
+
+button[type="submit"] {
+    padding: 8px 32px;
+    background-color: var(--color-rocket);
+    border-radius: 4px;
+    margin-top: 32px;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+}
