@@ -1,18 +1,13 @@
 {
   "instructors": [
     {
-      "avatar_url": "http://gabrielcaiana.com.br",
+      "id": 1,
       "name": "Gabriel",
-      "birth": "1996-02-07",
+      "avatar_url": "http://gabrielcaiana.com.br",
+      "birth": -4793472000000,
       "gender": "M",
-      "services": "tes,te"
-    },
-    {
-      "avatar_url": "http://www.test.com.br",
-      "name": "Polly",
-      "birth": "1886-11-15",
-      "gender": "M",
-      "services": "rqr,test"
+      "services": "1",
+      "created_At": 1583810652994
     }
   ]
 }

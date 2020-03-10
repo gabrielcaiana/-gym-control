@@ -15,7 +15,21 @@ exports.post = function(req, res){
         }
     }
 
-    data.instructors.push(req.body) // utilizando o arquivo json data - adicionando o req.body no array
+    let {avatar_url, birth, name, services, gender} = req.body
+
+    birth = Date.parse(birth) // Trabalhando com data no js
+    const created_At =   Date.now() // Trabalhando com data no js
+    const id = Number(data.instructors.length + 1)
+
+    data.instructors.push({
+        id,
+        name,
+        avatar_url,
+        birth,
+        gender,   
+        services,
+        created_At
+    }) // utilizando o arquivo json data - adicionando o req.body no array
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
         if(err) {
