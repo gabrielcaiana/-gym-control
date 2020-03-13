@@ -2,12 +2,21 @@
   "instructors": [
     {
       "id": 1,
-      "name": "Gabriel",
+      "name": "Gabriel Caiana",
       "avatar_url": "http://gabrielcaiana.com.br",
-      "birth": -4793472000000,
+      "birth": 849052800000,
       "gender": "M",
-      "services": "1",
-      "created_At": 1583810652994
+      "services": "UX, Front-end",
+      "created_At": 1584097980233
+    },
+    {
+      "id": 2,
+      "name": "João",
+      "avatar_url": "http://www.test.com.br",
+      "birth": 848707200000,
+      "gender": "M",
+      "services": "CrossFit, Musculação",
+      "created_At": 1584098655622
     }
   ]
 }

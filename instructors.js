@@ -1,6 +1,19 @@
 const fs = require('fs')
 const data = require("./data.json") // importando json data 
 
+//show
+exports.show = function(req, res) {
+    const { id } = req.params
+    
+    const foundInstructor = data.instructors.find(function(instructor) {
+        return instructor.id == id
+    })
+
+    if(!foundInstructor) return res.send('Instructor not found!')
+
+    return res.send(foundInstructor)
+}
+//create
 exports.post = function(req, res){
     //req.body
     // retorna = { "avatar_url": "http://www.test.com.br", "name": "Gabriel", "birth": "2019-12-01", "gender": "M", "services": "rqr" }
@@ -11,7 +24,7 @@ exports.post = function(req, res){
     for(key of keys) {
         // A linha abaixo é a mesma coisa que req.body.avatar_url ou qualquer coisa chave.
         if (req.body[key] == "") {
-            return res.send("Please, fill all fields")
+            return res.send("Please, fill all fields")  
         }
     }
 
