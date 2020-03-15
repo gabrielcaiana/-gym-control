@@ -17,6 +17,15 @@
       "gender": "M",
       "services": "CrossFit, Musculação",
       "created_At": 1584098655622
+    },
+    {
+      "id": 3,
+      "name": "Gisely Almeida",
+      "avatar_url": "http://www.giselyalmeida.com",
+      "birth": 8639982039600000,
+      "gender": "F",
+      "services": "Musculacao, crossFit",
+      "created_At": 1584284237993
     }
   ]
 }

@@ -2,37 +2,37 @@
 
 {% block content %}
     <div class="card">
-        <section class="avatar" style="background: url('https://source.unsplash.com/collection/6800490/500x500) no-repeat center center cover;">
-        </section>
+        <section class="avatar" style="background: url({{ instructor.avatar_url }}) no-repeat center center cover;"></section>
         <section class="details">
             <h3>Detalhes</h3>
 
             <div class="item">
                 <div>Instrutor</div>
-                <div>Gabriel Caiana</div>
+                <div>{{ instructor.name }}</div>
             </div>
 
             <div class="item">
                 <div>Idade</div>
-                <div>29</div>
+                <div>{{ instructor.birth }}</div>
             </div>
 
             <div class="item">
                 <div>Sexo</div>
-                <div>Masculino</div>
+                <div>{{ instructor.gender }}</div>
             </div>
 
             <div class="item">
                 <div>Acompanhamento</div>
                 <div>
-                    <span>Masculação</span>
-                    <span>Crossfit</span>
+                    {% for service in services%}
+                        <span>{{ service }}</span>
+                    {% endfor %}
                 </div>
             </div>
 
             <div class="item">
                 <div>Desde</div>
-                <div>08/03/2020</div>
+                <div>{{ instructor.created_At }}</div>
             </div>
         </div>
     </section>
