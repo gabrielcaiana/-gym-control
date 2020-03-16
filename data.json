@@ -26,6 +26,15 @@
       "gender": "F",
       "services": "Musculacao, crossFit",
       "created_At": 1584284237993
+    },
+    {
+      "id": 4,
+      "name": "Gabriel Guedes",
+      "avatar_url": "http://gabrielcaiana.com.br",
+      "birth": 943660800000,
+      "gender": "M",
+      "services": "UX Design, Front-End",
+      "created_At": 1584319391596
     }
   ]
 }

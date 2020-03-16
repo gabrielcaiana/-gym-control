@@ -11,7 +11,15 @@ exports.show = function(req, res) {
 
     if(!foundInstructor) return res.send('Instructor not found!')
 
-    return res.render('instructors/show', {instructor: foundInstructor})
+    //conceito spread
+    const instructor = {
+        ...foundInstructor, // coloco o objeto inteiro dentro da variavel instructor
+        age: "", // vou sebrescrever os valores 
+        services: foundInstructor.services.split(","), // vou sebrescrever os valores
+        created_At: "" // vou sebrescrever os valores
+    }
+
+    return res.render('instructors/show', {instructor})
 }
 //create
 exports.post = function(req, res){
