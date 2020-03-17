@@ -14,10 +14,10 @@ exports.show = function (req, res) {
 
     //conceito spread
     const instructor = {
-        ...foundInstructor, // coloco o objeto inteiro dentro da variavel instructor
-        age: age(foundInstructor.birth), // vou sebrescrever os valores 
-        services: foundInstructor.services.split(","), // vou sebrescrever os valores
-        created_At: "" // vou sebrescrever os valores
+        ...foundInstructor, // aplicando o spread
+        age: age(foundInstructor.birth), // aplicando funcao age em birth
+        services: foundInstructor.services.split(","), // transformando services em array
+        created_At: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_At) // formatando data de cadastro
     }
 
     return res.render('instructors/show', { instructor })
