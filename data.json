@@ -1,17 +1,17 @@
 {
   "instructors": [
     {
-      "id": 1,
-      "name": "Gabriel",
-      "avatar_url": "http://gabrielcaiana.com.br",
+      "id": "1",
+      "name": "Gabriel Caiana Guedes",
+      "avatar_url": "http://gabrielcaiana.com",
       "birth": 849052800000,
       "gender": "M",
-      "services": "UX Design, Front-End",
+      "services": "UX Design, Front-End, Product Designer",
       "created_At": 1584357604707
     },
     {
-      "id": 2,
-      "name": "José",
+      "id": "2",
+      "name": "José Paulo",
       "avatar_url": "https://source.unsplash.com/collection/6800490/500x600",
       "birth": 823305600000,
       "gender": "M",
@@ -71,6 +71,15 @@
       "gender": "F",
       "services": "balé, natação, esteira",
       "created_At": 1584482031518
+    },
+    {
+      "id": 9,
+      "name": "Naruto Uzumaki",
+      "avatar_url": "http://naruto.com",
+      "birth": 849052800000,
+      "gender": "M",
+      "services": "Anime, Manga",
+      "created_At": 1585534599608
     }
   ]
 }
