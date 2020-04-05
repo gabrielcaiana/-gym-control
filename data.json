@@ -1,15 +1,6 @@
 {
   "instructors": [
     {
-      "id": "1",
-      "name": "Gabriel Caiana Guedes",
-      "avatar_url": "http://gabrielcaiana.com",
-      "birth": 849052800000,
-      "gender": "M",
-      "services": "UX Design, Front-End, Product Designer",
-      "created_At": 1584357604707
-    },
-    {
       "id": "2",
       "name": "José Paulo",
       "avatar_url": "https://source.unsplash.com/collection/6800490/500x600",
@@ -37,16 +28,16 @@
       "created_At": 1584357919168
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Rafael Augusto",
       "avatar_url": "http://www.rafaelagusto.com",
       "birth": 812851200000,
       "gender": "M",
-      "services": "Vue, React",
+      "services": "Vue, React, goLang",
       "created_At": 1584405727435
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Joaquim",
       "avatar_url": "https://o.aolcdn.com/images/dims?thumbnail=980%2C653&quality=80&image_uri=http%3A%2F%2Fwww.blogcdn.com%2Fslideshows%2Fimages%2Fslides%2F360%2F259%2F5%2FS3602595%2Fslug%2Fl%2Fgoogle-1200-2-1.jpg&client=amp-blogside-v2&signature=37ff54c2ef8f42c75b41d9b4be0aa84c2825ad52",
       "birth": 533606400000,

@@ -12,8 +12,9 @@
     box-sizing: border-box;
 }
 
-body,html {
-    font-family: 'Roboto',Helvetica, sans-serif;
+body,
+html {
+    font-family: 'Roboto', Helvetica, sans-serif;
     background-color: var(--color-rocket);
 }
 
@@ -29,7 +30,7 @@ header .links {
     line-height: 32px;
 }
 
-header .links a + a {
+header .links a+a {
     margin-left: 20px;
 }
 
@@ -48,7 +49,6 @@ header .links a:hover {
     color: var(--color-rocket);
 }
 
-
 header .links a::after {
     content: "";
     width: 0;
@@ -58,6 +58,7 @@ header .links a::after {
     left: 0;
     background-color: var(--color-rocket);
 }
+
 header .links a:hover::after {
     width: 100%;
     transition: width 300ms ease-in-out;
@@ -83,6 +84,7 @@ header .links a:hover::after {
         opacity: 1;
     }
 }
+
 
 /* Details */
 
@@ -122,7 +124,7 @@ header .links a:hover::after {
 
 .details .item span {
     padding: 8px 16px;
-    background-color: var(--color-secundary) ;
+    background-color: var(--color-secundary);
     border-radius: 16px;
     color: #777;
     margin-right: 4px;
@@ -133,6 +135,7 @@ header .links a:hover::after {
     font-size: 12px;
     line-height: 22px;
 }
+
 
 /* Form */
 
@@ -156,7 +159,8 @@ input::placeholder {
     font-weight: normal;
 }
 
-button[type="submit"], a.button {
+button[type="submit"],
+a.button {
     padding: 8px 32px;
     background-color: var(--color-rocket);
     border-radius: 4px;
@@ -171,4 +175,9 @@ a.button {
     box-sizing: border-box;
     text-decoration: none;
     text-align: center;
+}
+
+#form-delete button[type="submit"] {
+    margin-top: 8px;
+    background-color: lightcoral;
 }
