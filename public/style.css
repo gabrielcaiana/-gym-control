@@ -66,6 +66,7 @@ header .links a:hover::after {
 
 .card {
     background-color: white;
+    background-size: cover;
     width: 800px;
     min-height: 400px;
     margin: 45px auto;
@@ -206,4 +207,20 @@ th {
 
 tbody tr:last-child td {
     border: none;
+}
+
+tbody tr td:first-child {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+}
+
+tbody tr td:first-child span {
+    width: 48px;
+    height: 48px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 3px 1px 6px -4px;
+    border: 2px solid white;
 }
