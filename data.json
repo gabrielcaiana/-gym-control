@@ -11,12 +11,21 @@
     },
     {
       "id": 2,
-      "name": "Gisely",
+      "name": "Gisely Almeida Caiana de Aquino",
       "avatar_url": "http://www.gisely.com",
       "birth": 793324800000,
       "gender": "F",
       "services": "Marketing, Moda",
       "created_At": 1586147906474
+    },
+    {
+      "id": 3,
+      "name": "Polly Caiana",
+      "avatar_url": "http://www.polly.com",
+      "birth": 1545523200000,
+      "gender": "F",
+      "services": "Canica",
+      "created_At": 1586233700310
     }
   ]
 }
