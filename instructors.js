@@ -4,7 +4,16 @@ const { age, date } = require('./utils')
 
 //index
 exports.index = function(req, res) {
-    return res.render('instructors/index', { instructors: data.instructors })
+
+ const instructors = data.instructors.map(function(instructor){
+     const spreadInstructor = {
+         ...instructor,
+         services: instructor.services.split(',')
+     }
+     return spreadInstructor
+ })
+
+    return res.render('instructors/index',{instructors})
 }
 
 //show
