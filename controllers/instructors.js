@@ -15,26 +15,6 @@ exports.index = function(req, res) {
     return res.render('instructors/index',{instructors})
 }
 
-exports.show = function(req, res) {
-    const { id } = req.params
-
-    const foundInstructor = data.instructors.find(function(instructor) {
-        return instructor.id == id
-    })
-
-    if (!foundInstructor) return res.send('Instructor not found!')
-
-    //conceito spread
-    const instructor = {
-        ...foundInstructor, // aplicando o spread
-        age: age(foundInstructor.birth), // aplicando funcao age em birth
-        services: foundInstructor.services.split(","), // transformando services em array
-        created_At: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_At) // formatando data de cadastro
-    }
-
-    return res.render('instructors/show', { instructor })
-}
-
 exports.create = function(req, res) {
     return res.render('instructors/create')
 }
@@ -77,6 +57,26 @@ exports.post = function(req, res) {
     })
 
     // return res.send(req.body)
+}
+
+exports.show = function(req, res) {
+    const { id } = req.params
+
+    const foundInstructor = data.instructors.find(function(instructor) {
+        return instructor.id == id
+    })
+
+    if (!foundInstructor) return res.send('Instructor not found!')
+
+    //conceito spread
+    const instructor = {
+        ...foundInstructor, // aplicando o spread
+        age: age(foundInstructor.birth), // aplicando funcao age em birth
+        services: foundInstructor.services.split(","), // transformando services em array
+        created_At: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_At) // formatando data de cadastro
+    }
+
+    return res.render('instructors/show', { instructor })
 }
 
 exports.edit = function(req, res) {

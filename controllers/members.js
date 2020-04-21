@@ -7,12 +7,46 @@ exports.index = function(req, res) {
  const members = data.members.map(function(member){
      const spreadMember = {
          ...member,
-         services: member.services.split(',')
      }
      return spreadMember
  })
 
     return res.render('members/index',{members})
+}
+
+exports.create =  function(req, res) {
+    return res.render('members/create')
+}
+
+exports.post = function(req, res) {
+    const keys = Object.keys(req.body) 
+    for (key of keys) {
+        if (req.body[key] == "") {
+            return res.send("Please, fill all fields")
+        }
+    }
+
+    birth = Date.parse(req.body.birth)
+
+    let id = 1
+    const lastMember = data.members[data.members.length - 1]
+
+    if(lastMember) {
+        id = lastMember.id + 1
+    }
+    
+    data.members.push({
+       id,
+       ...req.body,
+       birth
+     })
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
+        if (err) {
+            return res.send('Write file error')
+        }
+        return res.redirect(`/members/${id}`)
+    })
 }
 
 exports.show = function(req, res) {
@@ -30,39 +64,6 @@ exports.show = function(req, res) {
     }
 
     return res.render('members/show', { member })
-}
-
-exports.create =  function(req, res) {
-    return res.render('members/create')
-}
-
-exports.post = function(req, res) {
-    const keys = Object.keys(req.body) 
-    for (key of keys) {
-        if (req.body[key] == "") {
-            return res.send("Please, fill all fields")
-        }
-    }
-
-    let { avatar_url, birth, name,gender } = req.body
-
-    birth = Date.parse(birth)
-    const id = Number(data.members.length + 1)
-
-    data.members.push({
-            id,
-            name,
-            avatar_url,
-            birth,
-            gender,
-        })
-
-    fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
-        if (err) {
-            return res.send('Write file error')
-        }
-        return res.redirect('/members')
-    })
 }
 
 exports.edit = function(req, res) {

@@ -76,6 +76,12 @@ header .links a:hover::after {
     animation: up 200ms ease-in-out;
 }
 
+.avatar {
+    background-size: auto 100%; 
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 @keyframes up {
     from {
         opacity: 0;
