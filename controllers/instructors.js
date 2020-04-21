@@ -1,8 +1,7 @@
 const fs = require('fs')
-const data = require("./data.json") // importando json data
-const { age, date } = require('./utils')
+const data = require("../data.json") // importando json data
+const { age, date } = require('../utils')
 
-//index
 exports.index = function(req, res) {
 
  const instructors = data.instructors.map(function(instructor){
@@ -16,7 +15,6 @@ exports.index = function(req, res) {
     return res.render('instructors/index',{instructors})
 }
 
-//show
 exports.show = function(req, res) {
     const { id } = req.params
 
@@ -31,13 +29,16 @@ exports.show = function(req, res) {
         ...foundInstructor, // aplicando o spread
         age: age(foundInstructor.birth), // aplicando funcao age em birth
         services: foundInstructor.services.split(","), // transformando services em array
-        created_At: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_At) // formatando data de cadastro
+        created_At: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_At) // formatando data de cadastro
     }
 
     return res.render('instructors/show', { instructor })
 }
 
-//create
+exports.create = function(req, res) {
+    return res.render('instructors/create')
+}
+
 exports.post = function(req, res) {
     //req.body
     // retorna = { "avatar_url": "http://www.test.com.br", "name": "Gabriel", "birth": "2019-12-01", "gender": "M", "services": "rqr" }
@@ -78,7 +79,6 @@ exports.post = function(req, res) {
     // return res.send(req.body)
 }
 
-//edit
 exports.edit = function(req, res) {
     const { id } = req.params
 
@@ -96,7 +96,6 @@ exports.edit = function(req, res) {
     return res.render('instructors/edit', { instructor })
 }
 
-//put
 exports.put = function(req, res) {
     const { id } = req.body
     let index = 0
@@ -128,7 +127,6 @@ exports.put = function(req, res) {
     })
 }
 
-//delete
 exports.delete = function(req, res) {
     const { id } = req.body
     const filteredInstructors = data.instructors.filter(function(instructor) {
