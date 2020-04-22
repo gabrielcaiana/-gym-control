@@ -10,6 +10,17 @@
       "blood": "B-",
       "weight": "94",
       "height": "188"
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+      "name": "Gisely Almeida",
+      "email": "giselyalmeida@gmail.com",
+      "birth": 793238400000,
+      "gender": "F",
+      "blood": "O+",
+      "weight": "65",
+      "height": "170"
     }
   ],
   "instructors": [
@@ -30,24 +41,6 @@
       "gender": "F",
       "services": "Pilates, Ioga, corrida",
       "created_At": 1587101670290
-    },
-    {
-      "id": 4,
-      "name": "Gabriel Caiana Guedes",
-      "avatar_url": "https://scontent.fcgh4-1.fna.fbcdn.net/v/t1.0-9/s960x960/78334707_165107608223078_432012687082258432_o.jpg?_nc_cat=111&_nc_sid=84a396&_nc_eui2=AeFKCUEtGK07ymEFCmG-Xtlb79wab_2ksVrv3Bpv_aSxWjxSwFJXj6ywXBoCRzEUevDmMmThCJWA7kyGL6IbrJXN&_nc_ohc=Q8Rm0nyIMN0AX_xVebP&_nc_pt=1&_nc_ht=scontent.fcgh4-1.fna&_nc_tp=7&oh=a079a9923d560653b7eadcb675ab8c33&oe=5EC1FFFA",
-      "birth": 849052800000,
-      "gender": "M",
-      "services": "Crossfit, Natação, Musculação",
-      "created_At": 1587318065942
-    },
-    {
-      "id": 4,
-      "name": "Polly Caiana",
-      "avatar_url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-      "birth": 1545523200000,
-      "gender": "F",
-      "services": "Crossfit, musculação",
-      "created_At": 1587508120624
     }
   ]
 }
