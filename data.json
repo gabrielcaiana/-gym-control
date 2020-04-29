@@ -25,6 +25,18 @@
   ],
   "instructors": [
     {
+<<<<<<< HEAD
+=======
+      "id": 2,
+      "name": "Maria silva",
+      "avatar_url": "https://images.unsplash.com/photo-1434682966726-19ad3a76e143?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80",
+      "birth": 433987200000,
+      "gender": "F",
+      "services": "Musculação, cardio, box",
+      "created_At": 1587101640007
+    },
+    {
+>>>>>>> 85670afca95e589511d76e317024f7606e18ac97
       "id": 3,
       "name": "João Paulo",
       "avatar_url": "https://images.unsplash.com/photo-1558466018-750096b8ead7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=648&q=80",

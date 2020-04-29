@@ -38,10 +38,17 @@ exports.post = function(req, res) {
     birth = Date.parse(birth) // Trabalhando com data no js
     const created_At = Date.now() // Trabalhando com data no js
     let id = 1
+<<<<<<< HEAD
     const lastMember = data.members[data.members.length - 1]
 
     if(lastMember) {
         id = lastMember.id + 1
+=======
+    const lastInstructor = data.instructors[data.instructors.length - 1]
+
+    if(lastInstructor) {
+        id = lastInstructor.id + 1
+>>>>>>> 85670afca95e589511d76e317024f7606e18ac97
     }
 
     data.instructors.push({
