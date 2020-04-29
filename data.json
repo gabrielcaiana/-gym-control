@@ -2,20 +2,20 @@
   "members": [
     {
       "id": 1,
-      "avatar_url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+      "avatar_url": "https://scontent.fcgh4-1.fna.fbcdn.net/v/t1.0-9/70980451_112421226825050_9129132989727375360_n.jpg?_nc_cat=103&_nc_sid=a4a2d7&_nc_ohc=MfbsRfdAM8QAX-VBRpC&_nc_pt=1&_nc_ht=scontent.fcgh4-1.fna&oh=8345407503fb5027a3e340f4a6a6449f&oe=5ECE6945",
       "name": "Gabriel Caiana",
       "email": "gabrielcaianaguedes@gmail.com",
       "birth": 849052800000,
       "gender": "M",
       "blood": "B-",
-      "weight": "94",
+      "weight": "96",
       "height": "188"
     },
     {
       "id": 2,
-      "avatar_url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-      "name": "Gisely Almeida",
-      "email": "giselyalmeida@gmail.com",
+      "avatar_url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "name": "Maria ",
+      "email": "maria@gmail.com",
       "birth": 793238400000,
       "gender": "F",
       "blood": "O+",
@@ -25,22 +25,13 @@
   ],
   "instructors": [
     {
-      "id": 2,
-      "name": "Maria silva",
-      "avatar_url": "https://images.unsplash.com/photo-1434682966726-19ad3a76e143?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80",
-      "birth": 433987200000,
-      "gender": "F",
-      "services": "Musculação, cardio, Pilates",
-      "created_At": 1587101640007
-    },
-    {
       "id": 3,
-      "name": "Gisely Almeida",
-      "avatar_url": "https://scontent.fcgh5-1.fna.fbcdn.net/v/t1.0-9/67379563_2389083184517306_4568553049148096512_o.jpg?_nc_cat=105&_nc_sid=84a396&_nc_ohc=ZOM9VDe-3OQAX8eiqM7&_nc_pt=1&_nc_ht=scontent.fcgh5-1.fna&oh=94ff4b9fc7dce291ff0257697a79368d&oe=5EBF8325",
-      "birth": 793238400000,
-      "gender": "F",
-      "services": "Pilates, Ioga, corrida",
-      "created_At": 1587101670290
+      "name": "João Paulo",
+      "avatar_url": "https://images.unsplash.com/photo-1558466018-750096b8ead7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=648&q=80",
+      "birth": 754358400000,
+      "gender": "M",
+      "services": "Box, Natação",
+      "created_At": 1587693850482
     }
   ]
 }
