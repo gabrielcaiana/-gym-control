@@ -2,7 +2,7 @@
   "members": [
     {
       "id": 1,
-      "avatar_url": "https://scontent.fcgh4-1.fna.fbcdn.net/v/t1.0-9/70980451_112421226825050_9129132989727375360_n.jpg?_nc_cat=103&_nc_sid=a4a2d7&_nc_ohc=MfbsRfdAM8QAX-VBRpC&_nc_pt=1&_nc_ht=scontent.fcgh4-1.fna&oh=8345407503fb5027a3e340f4a6a6449f&oe=5ECE6945",
+      "avatar_url": "https://scontent.fcgh5-1.fna.fbcdn.net/v/t1.0-9/71256789_112418146825358_8772303305729638400_n.jpg?_nc_cat=107&_nc_sid=a4a2d7&_nc_eui2=AeHw7arrfds7TyxAncQK4bkEIuTt8qdJG0Qi5O3yp0kbRD8IihowzapWho4Hq25zNQ7Iwvfr5brUbrWBwCLzSJKn&_nc_ohc=qsmOI7SYMDsAX85R5Iq&_nc_oc=AQnsjAATtzQLtxOcYDEwuZfKa2T9RZ89NlTda5o11S0V2PUZmsk3vtPp640cTljczRg&_nc_pt=1&_nc_ht=scontent.fcgh5-1.fna&oh=cc5e3437e7000d2bd59e778db0e7c982&oe=5F58F436",
       "name": "Gabriel Caiana",
       "email": "gabrielcaianaguedes@gmail.com",
       "birth": 849052800000,
@@ -25,18 +25,6 @@
   ],
   "instructors": [
     {
-<<<<<<< HEAD
-=======
-      "id": 2,
-      "name": "Maria silva",
-      "avatar_url": "https://images.unsplash.com/photo-1434682966726-19ad3a76e143?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80",
-      "birth": 433987200000,
-      "gender": "F",
-      "services": "Musculação, cardio, box",
-      "created_At": 1587101640007
-    },
-    {
->>>>>>> 85670afca95e589511d76e317024f7606e18ac97
       "id": 3,
       "name": "João Paulo",
       "avatar_url": "https://images.unsplash.com/photo-1558466018-750096b8ead7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=648&q=80",
@@ -44,6 +32,24 @@
       "gender": "M",
       "services": "Box, Natação",
       "created_At": 1587693850482
+    },
+    {
+      "id": 4,
+      "name": "Gisely Almeida de Aquino",
+      "avatar_url": "https://scontent.fcgh5-1.fna.fbcdn.net/v/t1.0-9/116129129_3189683261123957_4191816966221822433_n.jpg?_nc_cat=102&_nc_sid=84a396&_nc_eui2=AeFajfZmD-CC8lC_KL62wgxPmY_W8J6A5HyZj9bwnoDkfHQIoKDUZv1kXAyyHfdGDaUUmePeXbi_jaHL1jSKN-Ek&_nc_ohc=gOC1SAesZFIAX9uG8Zf&_nc_oc=AQkbkPJDwC-PYZUBwSSlq-sht3IK6xovtOgC3-bUQBSEHrVZDfbYPL1qQSy17pL7l8w&_nc_pt=1&_nc_ht=scontent.fcgh5-1.fna&oh=a8159548f858e0a2966963e1c5beac92&oe=5F56C204",
+      "birth": 793324800000,
+      "gender": "F",
+      "services": "Pilates, Natação, Ioga",
+      "created_At": 1597173122712
+    },
+    {
+      "id": 5,
+      "name": "Lucineia Caiana",
+      "avatar_url": "https://scontent.fcgh5-1.fna.fbcdn.net/v/t1.0-9/72177290_152309776024357_5422967858462195712_o.jpg?_nc_cat=104&_nc_sid=730e14&_nc_eui2=AeHmT7MG0LOtZZTX7lhHqf4BTvXChnV5apBO9cKGdXlqkIW-RLK45Qwcczv8DdX-35Agwd2d_eNIhScInT5ZHgHJ&_nc_ohc=Jg-qZeaIcwkAX9ZkckE&_nc_pt=1&_nc_ht=scontent.fcgh5-1.fna&oh=052653742ef9b56eb76e2e278f7309d2&oe=5F594154",
+      "birth": 329961600000,
+      "gender": "F",
+      "services": "Ioga",
+      "created_At": 1597173502594
     }
   ]
 }
