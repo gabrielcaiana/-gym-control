@@ -18,11 +18,20 @@ html {
     background-color: var(--color-rocket);
 }
 
-header {
+.container{
+    display: flex;
     background-color: #fff;
     width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: #fff;
+    width: 900px;
     padding: 32px;
     text-align: center;
+    position: relative;
 }
 
 header .links {
@@ -62,6 +71,12 @@ header .links a::after {
 header .links a:hover::after {
     width: 100%;
     transition: width 300ms ease-in-out;
+}
+
+header .links .back {
+    position: absolute;
+    left: 70px;
+    font-size: 16px;
 }
 
 .card {

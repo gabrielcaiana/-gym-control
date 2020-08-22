@@ -8,6 +8,14 @@ for(item of menuItems) {
     } 
 }
 
+//Botão voltar
+back = document.querySelector(".back")
+
+back.addEventListener("click", function(){
+    window.history.back()
+})
+
+
 // delete confirmation
 const formDelete = document.querySelector("#form-delete")
 formDelete.addEventListener("submit", function(event){
@@ -16,3 +24,4 @@ formDelete.addEventListener("submit", function(event){
         event.preventDefault()
     }
 })
+
