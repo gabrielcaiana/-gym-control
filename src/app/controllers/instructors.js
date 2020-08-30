@@ -3,9 +3,16 @@ const instructor = require("../models/instructor");
 
 module.exports = {
   index(req, res) {
-    instructor.all(function (instructors) {
-      return res.render("instructors/index", { instructors });
-    });
+    const { filter } = req.query;
+      instructor.findBy(filter, function(instructors){
+        return res.render("instructors/index", { instructors });
+      })
+    if (filter) {
+    } else {
+      instructor.all(function (instructors) {
+        return res.render("instructors/index", { instructors });
+      });
+    }
   },
   create(req, res) {
     return res.render("instructors/create");
@@ -34,15 +41,15 @@ module.exports = {
       return res.render("instructors/show", { instructor });
     });
   },
-  edit(req, res) {  
+  edit(req, res) {
     instructor.find(req.params.id, function (instructor) {
       if (!instructor) return res.send("Instructors not found!");
 
-      instructor.birth = date(instructor.birth).iso
-      instructor.services = instructor.services.split(",")
-      instructor.created_at = date(instructor.created_at).format
+      instructor.birth = date(instructor.birth).iso;
+      instructor.services = instructor.services.split(",");
+      instructor.created_at = date(instructor.created_at).format;
 
-      return res.render("instructors/edit", { instructor })
+      return res.render("instructors/edit", { instructor });
     });
   },
   put(req, res) {
@@ -54,13 +61,13 @@ module.exports = {
       }
     }
 
-    instructor.update(req.body, function(){
-      return res.redirect(`/instructors/${req.body.id}`)
-    })
+    instructor.update(req.body, function () {
+      return res.redirect(`/instructors/${req.body.id}`);
+    });
   },
   delete(req, res) {
-    instructor.delete(req.body.id, function(){
-      return res.redirect(`/instructors`)
-    })
+    instructor.delete(req.body.id, function () {
+      return res.redirect(`/instructors`);
+    });
   },
 };
