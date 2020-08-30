@@ -34,7 +34,7 @@ module.exports = {
       return res.render("instructors/show", { instructor });
     });
   },
-  edit(req, res) {
+  edit(req, res) {  
     instructor.find(req.params.id, function (instructor) {
       if (!instructor) return res.send("Instructors not found!");
 
