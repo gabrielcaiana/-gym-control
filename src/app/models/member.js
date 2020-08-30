@@ -1,11 +1,10 @@
-const db = require('../../config/db');
+const db = require("../../config/db");
 const { date } = require("../../lib/utils");
 
 module.exports = {
   all(callback) {
     db.query(`SELECT * FROM members`, function (err, results) {
-
-      if (err) throw `Database error! ${err}`
+      if (err) throw `Database error! ${err}`;
       callback(results.rows);
     });
   },
@@ -34,23 +33,30 @@ module.exports = {
       data.blood,
       data.weight,
       data.height,
-      data.instructor
+      data.instructor,
     ];
 
     db.query(query, values, function (err, results) {
-     if (err) throw `Database error! ${err}`
+      if (err) throw `Database error! ${err}`;
 
-      callback(results.rows[0])
+      callback(results.rows[0]);
     });
   },
   find(id, callback) {
-   db.query(`SELECT * FROM members WHERE id = $1`, [id], function(err, results){
-    if (err) throw `Database error! ${err}`;
-    callback(results.rows[0])
-   })
+    db.query(
+      `SELECT members.*, instructors.name AS instructor_name FROM members
+       LEFT JOIN instructors ON (members.instructor_id = instructors.id)
+       WHERE members.id = $1
+      `,
+      [id],
+      function (err, results) {
+        if (err) throw `Database error! ${err}`;
+        callback(results.rows[0]);
+      }
+    );
   },
-  update(data, callback){
-   const query = `UPDATE members SET
+  update(data, callback) {
+    const query = `UPDATE members SET
                   avatar_url= ($1),
                   name= ($2),
                   birth= ($3),
@@ -61,37 +67,40 @@ module.exports = {
                   height= ($8),
                   instructor_id=($9)
           WHERE id = $10
-    `
+    `;
 
     const values = [
-     data.avatar_url,
-     data.name,
-     date(data.birth).iso,
-     data.gender,
-     data.email,
-     data.blood,
-     data.weight,
-     data.height,
-     data.instructor,
-     data.id
-    ]
+      data.avatar_url,
+      data.name,
+      date(data.birth).iso,
+      data.gender,
+      data.email,
+      data.blood,
+      data.weight,
+      data.height,
+      data.instructor,
+      data.id,
+    ];
 
-    db.query(query, values, function(err, results){
-      if (err) throw `Database error! ${err}`
-     callback()
-    })
+    db.query(query, values, function (err, results) {
+      if (err) throw `Database error! ${err}`;
+      callback();
+    });
   },
-  delete(id, callback){
-    db.query(`DELETE FROM members WHERE id = $1`, [id], function(err, results){
-      if (err) throw `Database error! ${err}`
+  delete(id, callback) {
+    db.query(`DELETE FROM members WHERE id = $1`, [id], function (
+      err,
+      results
+    ) {
+      if (err) throw `Database error! ${err}`;
 
-      return callback()
-    })
+      return callback();
+    });
   },
-  instructorsSelectOptions(callback){
-    db.query(`SELECT name, id FROM instructors`, function(err, results) {
-      if (err) throw `Database error! ${err}`
-      callback(results.rows)
-    })
-  }
-}; 
+  instructorsSelectOptions(callback) {
+    db.query(`SELECT name, id FROM instructors`, function (err, results) {
+      if (err) throw `Database error! ${err}`;
+      callback(results.rows);
+    });
+  },
+};
