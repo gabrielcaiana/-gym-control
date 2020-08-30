@@ -35,12 +35,14 @@ module.exports = {
     });
   },
   edit(req, res) {
-    member.find(req.params.id, function (member) {
-      if (!member) return res.send("Members not found!");
+    member.find(req.params.id, function (Member) {
+      if (!Member) return res.send("Members not found!");
 
-      member.birth = date(member.birth).iso
-      return res.render("members/edit", { member })
-    });
+      Member.birth = date(Member.birth).iso
+      member.instructorsSelectOptions(function(options){
+        return res.render("members/edit", {Member, instructorOptions: options});
+      })
+    })
   },
   put(req, res) {
     const keys = Object.keys(req.body);
