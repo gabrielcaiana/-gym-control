@@ -5,7 +5,7 @@
     <div class="header">
       <a class="button" href="/instructors/create">Novo</a>
       <form action="/instructors" method="GET">
-        <input type="text" name="filter" placeholder="Filtrar por nome">
+        <input type="text" name="filter" placeholder="nome ou atendimento" value="{{ filter }}">
         <button type="submit">Filtrar</button>
       </form>
     </div>
