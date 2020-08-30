@@ -50,6 +50,7 @@
         <option value="O-"
         {%if member.blood == "O-"%} selected{% endif%}>O-</option>
     </select>
+    </div>
 
     <div class="item">
         <div>Peso (Kg)</div>
@@ -60,6 +61,15 @@
         <div>Altura (cm)</div>
         <input type="number" name="height" value="{{ member.height }}">
     </div>
+</div>
+
+<div class="item">
+    <div>Instrutor</div>
+    <select name="instructor">
+        {%for instructor in instructorOptions%}
+            <option value="{{ instructor.id }}" {%if member.instructor_id == member.instructor.id %} selected{% endif%}>{{instructor.name}}</option>
+        {%endfor%}
+    </select>
 </div>
 
 <button type="submit">Salvar</button>
