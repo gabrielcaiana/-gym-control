@@ -39,6 +39,7 @@ module.exports = {
       if (!Member) return res.send("Members not found!");
 
       Member.birth = date(Member.birth).iso
+      
       member.instructorsSelectOptions(function(options){
         return res.render("members/edit", {Member, instructorOptions: options});
       })
