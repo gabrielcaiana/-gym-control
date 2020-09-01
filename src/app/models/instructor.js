@@ -19,7 +19,8 @@ module.exports = {
         });
         if (err) throw `Database error! ${err}`;
         callback(instructors);
-      });
+      }
+    );
   },
   create(data, callback) {
     const query = `
@@ -67,17 +68,18 @@ module.exports = {
         OR instructors.services ILIKE '%${filter}%'
         GROUP BY instructors.id
         ORDER BY total_students DESC`,
-        function (err, results) {
-          const instructors = results.rows.map(function (instructor) {
-            spreadInstructors = {
-              ...instructor,
-              services: instructor.services.split(","),
-            };
-            return spreadInstructors;
-          });
-          if (err) throw `Database error! ${err}`;
-          callback(instructors);
-        });   
+      function (err, results) {
+        const instructors = results.rows.map(function (instructor) {
+          spreadInstructors = {
+            ...instructor,
+            services: instructor.services.split(","),
+          };
+          return spreadInstructors;
+        });
+        if (err) throw `Database error! ${err}`;
+        callback(instructors);
+      }
+    );
   },
   update(data, callback) {
     const query = `UPDATE instructors SET
@@ -113,4 +115,37 @@ module.exports = {
       return callback();
     });
   },
+  paginate(params) {
+    const { filter, limit, offset, callback } = params
+
+    let query = `
+     SELECT instructors.*, count(members) AS total_students
+     FROM instructors
+     LEFT JOIN members ON (members.instructor_id = instructors.id)
+     `
+
+    if (filter) {
+      query = `${query}
+      WHERE instructors.name ILIKE '%${filter}%'
+      OR instructors.services ILIKE '%${filter}%'
+      `
+    }
+
+    query = `${query}
+    GROUP BY instructors.id LIMIT $1 OFFSET $2
+    `
+
+    db.query(query,[limit,offset], function(err, results){
+      if(err) throw `Database Error ${err}`
+
+      const instructors = results.rows.map(function (instructor) {
+        spreadInstructors = {
+          ...instructor,
+          services: instructor.services.split(","),
+        };
+        return spreadInstructors;
+      });
+      callback(instructors)
+    })
+  }
 };
