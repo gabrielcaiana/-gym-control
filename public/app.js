@@ -15,13 +15,20 @@ back.addEventListener("click", function(){
     window.history.back()
 })
 
+//Paginação
+// [1,...,13, 14, 15, 16, 17, ..., 20]
+let totalPages = 20,
+    selectedPages = 15
+    pages = []
 
-// delete confirmation
-const formDelete = document.querySelector("#form-delete")
-formDelete.addEventListener("submit", function(event){
-    const confirmation = confirm("Deseja Deletar?")
-    if(!confirmation) {
-        event.preventDefault()
-    }
-})
+for(let currentPage = 1; currentPage <= totalPages; currentPage++) {
+    pages.push(currentPage)
+}
+
+console.log(pages)
+
+
+
+
+
 
