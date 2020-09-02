@@ -18,11 +18,30 @@ back.addEventListener("click", function(){
 //Paginação
 // [1,...,13, 14, 15, 16, 17, ..., 20]
 let totalPages = 20,
-    selectedPages = 15
-    pages = []
+    selectedPages = 6,
+    pages = [],
+    oldPage
 
 for(let currentPage = 1; currentPage <= totalPages; currentPage++) {
-    pages.push(currentPage)
+    
+    const firstAndLastPage = currentPage == 1 || currentPage == totalPages
+    const pagesAfterSelectedPage = currentPage <= selectedPages + 2
+    const pagesBeforeSelectedPage = currentPage >= selectedPages - 2
+
+    if(firstAndLastPage || pagesAfterSelectedPage && pagesBeforeSelectedPage) {
+
+        if(oldPage && currentPage - oldPage >2 ) {
+            pages.push("...")
+        }
+
+        if(oldPage && currentPage - oldPage == 2) {
+            pages.push(currentPage - 1)
+        }
+
+        pages.push(currentPage)
+        oldPage = currentPage
+    }
+    console.log(oldPage)
 }
 
 console.log(pages)

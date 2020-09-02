@@ -21,4 +21,10 @@
       </section>
    </div>
 
+ <script>
+   document.querySelector("#form-delete").addEventListener("submit", event => {
+    const confirmation = confirm("Deseja Deletar?")
+    if(!confirmation) event.preventDefault()
+})
+</script>
 {% endblock content %}
