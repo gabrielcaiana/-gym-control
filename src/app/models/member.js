@@ -98,8 +98,7 @@ module.exports = {
       if (err) throw `Database error! ${err}`;
       callback(results.rows);
     });
-  },
-
+  },  
   paginate(params) {
     const { filter, limit, offset, callback } = params
 
