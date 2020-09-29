@@ -12,11 +12,11 @@ Projeto realizado no Bootcamp LaunchBase da Rocketseat, foi utilizado o banco de
 e membros, aonde eles possam editar os dados e deletar o perfil, cada perfil cadastrado é listado na página principal, aonde é também possível fazer um
 filtro para buscar alguns perfis cadastrado.
 
-![](https://github.com/gabrielcaiana/GymManager/blob/master/public/img/CadastrarInstrutor.PNG =500x)
+![](https://github.com/gabrielcaiana/GymManager/blob/master/public/img/CadastrarInstrutor.PNG =500x500)
 
 <br>
 
-![](https://github.com/gabrielcaiana/GymManager/blob/master/public/img/listaInstrutor.PNG =500x)
+![](https://github.com/gabrielcaiana/GymManager/blob/master/public/img/listaInstrutor.PNG =500x500)
 
 #### Tecnologias utilizadas
 
