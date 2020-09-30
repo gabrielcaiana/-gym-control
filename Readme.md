@@ -8,7 +8,7 @@
 
 ### Objetivo do projeto
 
-Projeto realizado no Bootcamp LaunchBase da Rocketseat, foi utilizado o banco de dados PostgreSQL, A aplicação se consiste em fazer o cadastro de instrutores
+Projeto realizado no Bootcamp LaunchBase da Rocketseat, foi utilizado o banco de dados PostgreSQL, A aplicação consiste em fazer o cadastro de instrutores
 e membros, aonde eles possam editar os dados e deletar o perfil, cada perfil cadastrado é listado na página principal, aonde é também possível fazer um
 filtro para buscar alguns perfis cadastrado.
 
